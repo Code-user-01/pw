@@ -1,0 +1,257 @@
+:root {
+    --primary-font: 'Poppins', sans-serif;
+    --bg-color: #0c1b2e;
+    --primary-color: #ffffff;
+    --secondary-color: #ffc400;
+    --accent-color: #ffc400; /* Cambiado a amarillo */
+    --accent-hover-color: #e6b800; /* Más oscuro para el hover */
+    --header-bg-color: #122640;
+    --section-bg-color: #142b47;
+    --item-bg-color: #1c3b61;
+    --plan-bg-color: #1e456b;
+    --plan-border-color: #ffc400;
+    --dollar-icon-color: #00ff00;
+    --price-text-color: #00ff00;
+    --contact-border-color: #ffc400;
+    --white-bg-color: #ffffff;
+    --white-item-bg-color: #f0f0f0;
+    --black-text-color: #000000;
+    --led-color-bronze: #cd7f32;
+    --led-color-silver: #c0c0c0;
+    --led-color-gold: #ffd700;
+}
+
+body {
+    font-family: var(--primary-font);
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--header-bg-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.social-icons {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.social-icons a {
+    color: var(--primary-color);
+    margin-left: 15px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--accent-color);
+}
+
+.plan-section {
+    padding: 50px 20px;
+    background-color: var(--section-bg-color);
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.plan-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.plan-container h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+    position: relative;
+    display: inline-block;
+}
+
+.plan-container h2 i {
+    margin-right: 10px;
+    animation: pulse 1.5s infinite;
+}
+
+.plan-container p {
+    font-size: 1.5em; /* Aumentado el tamaño de texto */
+    margin-bottom: 20px;
+}
+
+.details {
+    background-color: var(--item-bg-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.details ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.details ul li {
+    margin-bottom: 10px;
+}
+
+.details ul ul {
+    margin-left: 20px;
+    list-style-type: disc;
+}
+
+.price {
+    font-size: 2em;
+    color: var(--price-text-color);
+    margin-top: 20px;
+    text-align: center;
+}
+
+.contact-button {
+    background-color: var(--accent-color);
+    color: var(--black-text-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+    display: inline-block;
+    font-size: 1em;
+    text-decoration: none; /* Para que luzca como un botón */
+    text-align: center;
+}
+
+.contact-button:hover {
+    background-color: var(--accent-hover-color);
+}
+
+.details .button-container {
+    display: flex;
+    justify-content: center; /* Centra el botón */
+}
+
+.separator {
+    height: 2px;
+    width: 50%;
+    background-color: var(--plan-border-color);
+    margin: 40px auto;
+}
+
+.back-button {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    background-color: var(--accent-color);
+    color: var(--black-text-color);
+    padding: 10px 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    z-index: 1000;
+}
+
+.back-button:hover {
+    background-color: var(--accent-hover-color);
+}
+
+footer {
+    background-color: var(--header-bg-color);
+    color: var(--primary-color);
+    text-align: center;
+    padding: 20px;
+    font-size: 1em;
+    border-top: 1px solid var(--plan-border-color);
+}
+
+footer p {
+    margin: 0;
+}
+
+.bronze {
+    color: var(--led-color-bronze);
+    text-shadow: 0 0 10px var(--led-color-bronze),
+                 0 0 20px var(--led-color-bronze),
+                 0 0 30px var(--led-color-bronze);
+    animation: ledEffectBronze 1.5s infinite alternate;
+}
+
+.silver {
+    color: var(--led-color-silver);
+    text-shadow: 0 0 10px var(--led-color-silver),
+                 0 0 20px var(--led-color-silver),
+                 0 0 30px var(--led-color-silver);
+    animation: ledEffectSilver 1.5s infinite alternate;
+}
+
+.gold {
+    color: var(--led-color-gold);
+    text-shadow: 0 0 10px var(--led-color-gold),
+                 0 0 20px var(--led-color-gold),
+                 0 0 30px var(--led-color-gold);
+    animation: ledEffectGold 1.5s infinite alternate;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes ledEffectBronze {
+    from {
+        text-shadow: 0 0 5px var(--led-color-bronze), 0 0 10px var(--led-color-bronze), 0 0 20px var(--led-color-bronze);
+    }
+    to {
+        text-shadow: 0 0 10px var(--led-color-bronze), 0 0 20px var(--led-color-bronze), 0 0 30px var(--led-color-bronze);
+    }
+}
+
+@keyframes ledEffectSilver {
+    from {
+        text-shadow: 0 0 5px var(--led-color-silver), 0 0 10px var(--led-color-silver), 0 0 20px var(--led-color-silver);
+    }
+    to {
+        text-shadow: 0 0 10px var(--led-color-silver), 0 0 20px var(--led-color-silver), 0 0 30px var(--led-color-silver);
+    }
+}
+
+@keyframes ledEffectGold {
+    from {
+        text-shadow: 0 0 5px var(--led-color-gold), 0 0 10px var(--led-color-gold), 0 0 20px var(--led-color-gold);
+    }
+    to {
+        text-shadow: 0 0 10px var(--led-color-gold), 0 0 20px var(--led-color-gold), 0 0 30px var(--led-color-gold);
+    }
+}
+[data-aos^="typing"] {
+    overflow: hidden; /* Ensure the content is hidden initially */
+    white-space: nowrap; /* Keeps the content in one line */
+    border-right: .15em solid var(--primary-color); /* Adds a caret */
+    animation: typing 2s steps(40, end), blink-caret .75s step-end infinite;
+}

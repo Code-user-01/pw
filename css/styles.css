@@ -1,0 +1,1000 @@
+:root {
+    --primary-font: 'Poppins', sans-serif;
+    --bg-color: #0c1b2e;
+    --primary-color: #ffffff;
+    --secondary-color: #ffc400; /* Color amarillo */
+    --accent-color: #00aaff;
+    --accent-hover-color: #0077cc;
+    --header-bg-color: #122640;
+    --section-bg-color: #142b47;
+    --item-bg-color: #1c3b61;
+    --plan-bg-color: #1e456b;
+    --plan-border-color: #ffc400;
+    --dollar-icon-color: #00ff00;
+    --price-text-color: #00ff00;
+    --contact-border-color: #ffc400;
+    --white-bg-color: #ffffff;
+    --white-item-bg-color: #f0f0f0;
+    --black-text-color: #000000;
+    --led-color-bronze: #cd7f32;
+    --led-color-silver: #c0c0c0;
+    --led-color-gold: #ffd700;
+    --led-color-purple: #9b59b6;
+    --led-shadow-color: rgba(155, 89, 182, 0.6);
+    --led-hover-shadow-color: rgba(155, 89, 182, 1);
+    --instagram-bg: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    --whatsapp-bg: #25D366;
+    --twitter-bg: #1DA1F2;
+    --facebook-bg: #3b5998;
+}
+
+/* Animaciones CSS */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.theme-toggle {
+    border: none;
+    background: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
+}
+
+.theme-toggle:hover {
+    background: none;
+    transform: none;
+    box-shadow: none;
+}
+
+.theme-toggle i {
+    font-size: 2em;
+    transition: transform 0.3s;
+    color: var(--primary-color);
+}
+
+.theme-toggle:active i {
+    transform: rotate(360deg);
+}
+
+.theme-toggle .fa-sun {
+    color: rgb(255, 174, 0);
+}
+
+.theme-toggle .fa-moon {
+    color: rgb(211, 228, 250);
+}
+
+body.dark-mode {
+    --primary-font: 'Poppins', sans-serif;
+    --bg-color: #000000;
+    --primary-color: #ffffff;
+    --secondary-color: #ffc400;
+    --accent-color: #00aaff;
+    --accent-hover-color: #0077cc;
+    --header-bg-color: #1a1a1a;
+    --section-bg-color: #000000;
+    --item-bg-color: #3d3d3d;
+    --plan-bg-color: #000000;
+    --plan-border-color: #ffc400;
+    --dollar-icon-color: #00ff00;
+    --price-text-color: #00ff00;
+    --contact-border-color: #ffc400;
+    --white-bg-color: #ffffff;
+    --white-item-bg-color: #f0f0f0;
+    --black-text-color: #000000;
+    --led-color-bronze: #cd7f32;
+    --led-color-silver: #c0c0c0;
+    --led-color-gold: #ffd700;
+    --led-color-purple: #9b59b6;
+    --led-shadow-color: rgba(155, 89, 182, 0.6);
+    --led-hover-shadow-color: rgba(155, 89, 182, 1);
+    --instagram-bg: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    --whatsapp-bg: #25D366;
+    --twitter-bg: #1DA1F2;
+    --facebook-bg: #3b5998;
+}
+
+body.dark-mode {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+}
+
+body.dark-mode header {
+    background-color: var(--header-bg-color);
+}
+
+body.dark-mode .nosotros-section {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+}
+
+body.dark-mode .servicios-section {
+    background-color: var(--white-bg-color);
+    color: var(--black-text-color);
+}
+
+body.dark-mode .planes-section {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+}
+
+body.dark-mode .porque-nosotros-section {
+    background-color: var(--white-bg-color);
+    color: var(--black-text-color);
+}
+
+body.dark-mode .contacto-section {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+}
+
+body.dark-mode footer {
+    background-color: var(--header-bg-color);
+}
+
+/* General styles for plan items and service items */
+.plan-item h3 i,
+.service-item h3 i {
+    margin-right: 10px;
+    font-size: 1.5em;
+}
+
+/* LED effect for bronze, silver, and gold icons */
+.plan-item[data-aos="flip-left"] h3 i {
+    color: var(--led-color-bronze);
+    text-shadow: 0 0 10px var(--led-color-bronze),
+                 0 0 20px var(--led-color-bronze),
+                 0 0 30px var(--led-color-bronze);
+    animation: ledEffectBronze 1.5s infinite alternate;
+}
+
+.plan-item[data-aos="flip-left"][data-aos-delay="100"] h3 i {
+    color: var(--led-color-silver);
+    text-shadow: 0 0 10px var(--led-color-silver),
+                 0 0 20px var(--led-color-silver),
+                 0 0 30px var(--led-color-silver);
+    animation: ledEffectSilver 1.5s infinite alternate;
+}
+
+.plan-item[data-aos="flip-left"][data-aos-delay="200"] h3 i {
+    color: var(--led-color-gold);
+    text-shadow: 0 0 10px var(--led-color-gold),
+                 0 0 20px var(--led-color-gold),
+                 0 0 30px var(--led-color-gold);
+    animation: ledEffectGold 1.5s infinite alternate;
+}
+
+/* LED animations for each color */
+@keyframes ledEffectBronze {
+    from {
+        text-shadow: 0 0 5px var(--led-color-bronze), 0 0 10px var(--led-color-bronze), 0 0 20px var(--led-color-bronze);
+    }
+    to {
+        text-shadow: 0 0 10px var(--led-color-bronze), 0 0 20px var(--led-color-bronze), 0 0 30px var(--led-color-bronze);
+    }
+}
+
+@keyframes ledEffectSilver {
+    from {
+        text-shadow: 0 0 5px var(--led-color-silver), 0 0 10px var(--led-color-silver), 0 0 20px var(--led-color-silver);
+    }
+    to {
+        text-shadow: 0 0 10px var(--led-color-silver), 0 0 20px var(--led-color-silver), 0 0 30px var(--led-color-silver);
+    }
+}
+
+@keyframes ledEffectGold {
+    from {
+        text-shadow: 0 0 5px var(--led-color-gold), 0 0 10px var(--led-color-gold), 0 0 20px var(--led-color-gold);
+    }
+    to {
+        text-shadow: 0 0 10px var(--led-color-gold), 0 0 20px var(--led-color-gold), 0 0 30px var(--led-color-gold);
+    }
+}
+
+/* Adjust the layout and styles */
+.plan-item, .service-item {
+    padding: 20px;
+    background-color: var(--plan-bg-color);
+    border-radius: 10px;
+    border: 1px solid var(--plan-border-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.plan-item:hover, .service-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Button styles */
+button,
+.contact-button,
+.toggle-details,
+.back-to-top {
+    background-color: var(--secondary-color); /* Use the secondary color for button background */
+    color: var(--black-text-color); /* Ensure text color is readable on yellow background */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+    display: inline-block;
+    font-size: 1em;
+    text-decoration: none; /* To make it look like a button */
+    text-align: center;
+}
+
+button:hover,
+.contact-button:hover,
+.toggle-details:hover,
+.back-to-top:hover {
+    background-color: var(--accent-hover-color); /* Darker shade for hover effect */
+}
+
+/* Specific button styles if needed */
+#startButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--secondary-color);
+    color: var(--black-text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#startButton:hover {
+    background-color: var(--accent-hover-color);
+}
+
+/* Example of a class for contact buttons, assuming similar button styles */
+.contact-button {
+    background-color: var(--secondary-color);
+    color: var(--black-text-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+    display: inline-block;
+    font-size: 1em;
+    text-decoration: none;
+    text-align: center;
+}
+
+.contact-button:hover {
+    background-color: var(--accent-hover-color);
+}
+
+/* Other existing styles... */
+
+body {
+    font-family: var(--primary-font);
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: var(--header-bg-color);
+    animation: fadeIn 2s ease-in-out;
+}
+
+header .logo {
+    font-size: 2em;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+@keyframes ledEffect {
+    from {
+        text-shadow: 0 0 5px var(--led-color), 0 0 10px var(--led-color), 0 0 20px var(--led-color), 0 0 40px var(--led-color);
+    }
+    to {
+        text-shadow: 0 0 10px var(--led-color), 0 0 20px var(--led-color), 0 0 30px var(--led-color), 0 0 60px var(--led-color);
+    }
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+#nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+#nav-links li {
+    display: inline;
+}
+
+#nav-links a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s;
+}
+
+#nav-links a:hover {
+    color: var(--secondary-color);
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    flex-direction: row;
+    gap: 20px;
+    padding: 1px 20px;
+    background-color: var(--section-bg-color);
+}
+
+.about .text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
+    text-align: center; /* Centra el texto */
+}
+
+#startButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: var(--secondary-color);
+    color: var(--black-text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#startButton:hover {
+    background-color: var(--accent-hover-color);
+}
+
+.about img {
+    max-width: 50%;
+    height: auto;
+    flex: 1;
+}
+
+.about .header-content {
+    margin-bottom: 20px;
+}
+
+.news, .contact {
+    background-color: var(--section-bg-color);
+    animation: fadeIn 2s ease-in-out;
+}
+
+.services, .why-choose {
+    background-color: var(--white-bg-color);
+    color: var(--black-text-color);
+}
+
+.about h1 {
+    font-size: 4em;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+.about h2 {
+    font-size: 2em;
+    color: var(--secondary-color);
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in-out forwards, ledEffect 0.5s infinite alternate;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: var(--secondary-color); /* Color amarillo */
+    color: var(--black-text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--accent-hover-color);
+}
+
+.services-content, .plans-content, .why-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.service-item, .plan-item, .why-item {
+    flex: 1 1 200px;
+    margin: 10px;
+    padding: 20px;
+    background-color: var(--item-bg-color);
+    border-radius: 10px;
+    border: 2px solid var(--plan-border-color);
+    animation: slideUp 1s ease-in-out;
+    transition: transform 0.3s;
+}
+
+.service-item, .why-item {
+    background-color: var(--white-item-bg-color);
+    color: var(--black-text-color);
+    border: 2px solid var(--plan-border-color);
+}
+
+.plan-item {
+    background-color: var(--plan-bg-color);
+    border: 1px solid var(--plan-border-color);
+}
+
+.plan-item h3 {
+    font-size: 2em;
+    justify-content: center;
+}
+
+.plan-item .price {
+    font-size: 1.5em;
+    color: var(--price-text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.plan-item .price i {
+    color: var(--dollar-icon-color);
+    margin-right: 5px;
+}
+
+.service-item:hover, .plan-item:hover, .why-item:hover {
+    transform: translateY(-10px);
+}
+
+/* Contact Form Styles */
+#contact-form {
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 40px auto 0;
+    padding: 20px;
+    background-color: var(--item-bg-color); /* Blue background for light mode */
+    border-radius: 8px;
+    border: 1px solid var(--contact-border-color);
+    color: var(--primary-color);
+}
+
+body.dark-mode #contact-form {
+    background-color: var(--plan-bg-color); /* Black background for dark mode */
+}
+
+#contact-form fieldset {
+    border: none;
+    padding: 0;
+}
+
+#contact-form legend {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+}
+
+#contact-form div {
+    margin-bottom: 15px;
+}
+
+#contact-form label {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    display: block;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid var(--secondary-color); /* Bordes amarillos */
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background-color: var(--white-bg-color);
+    color: var(--black-text-color);
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 8px rgba(92, 184, 92, 0.2);
+}
+
+#contact-form button {
+    padding: 15px 0;
+    background-color: var(--secondary-color); /* Color amarillo */
+    color: var(--black-text-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 100%;
+    text-align: center;
+}
+
+#contact-form button:hover {
+    background-color: var(--accent-hover-color);
+    transform: scale(1.05);
+}
+
+#contact-form button:active {
+    background-color: var(--accent-hover-color);
+    transform: scale(1);
+}
+
+/* Centering the contact hours paragraph */
+.contact-hours {
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Estilos específicos para el párrafo destacado en la sección de contacto */
+.contact-intro-text {
+    font-size: 1.2em; /* Tamaño de fuente ligeramente más grande */
+    line-height: 1.6; /* Espaciado entre líneas */
+    color: var(--primary-color); /* Color del texto */
+    text-align: center; /* Centrado del texto */
+    margin-bottom: 20px; /* Espaciado inferior */
+    padding: 10px 20px; /* Espaciado alrededor del texto */
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+#formMessage {
+    margin-top: 20px;
+}
+
+#formMessage.hidden {
+    display: none;
+}
+
+footer {
+    background-color: var(--header-bg-color);
+    padding: 10px 0;
+    text-align: center;
+}
+
+body.dark-mode footer {
+    background-color: var(--header-bg-color);
+}
+
+.separator {
+    height: 2px;
+    width: 50%;
+    background-color: var(--plan-border-color);
+    margin: 20px auto;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 15px;
+    background-color: var(--secondary-color); /* Color amarillo */
+    color: var(--black-text-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.back-to-top i {
+    font-size: 1.5em;
+}
+
+.back-to-top:hover {
+    background-color: var(--accent-hover-color);
+    transform: scale(1.1);
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a {
+    font-size: 1.5em;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+}
+
+.social-icons a.instagram {
+    background: var(--instagram-bg);
+}
+
+.social-icons a.whatsapp {
+    background: var(--whatsapp-bg);
+}
+
+.social-icons a.twitter {
+    background: var(--twitter-bg);
+}
+
+.social-icons a.facebook {
+    background: var(--facebook-bg);
+}
+
+.social-icons a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(45deg, rgba(255,255,255,0.15), rgba(255,255,255,0));
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.social-icons a:hover::before {
+    opacity: 1;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.social-icons a i {
+    color: var(--primary-color);
+    position: relative;
+    z-index: 1;
+}
+
+.social-icons .whatsapp:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(20px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 835px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    .about h2 {
+        font-size: 1.2em;
+        color: var(--secondary-color);
+        opacity: 0;
+        animation: fadeIn 0.5s ease-in-out forwards, ledEffect 0.5s infinite alternate;
+    }
+
+    .about h1 {
+        font-size: 1.7em;
+        color: var(--primary-color);
+        text-align: center;
+        margin-bottom: 20px;
+        margin-top: 0;
+        animation: fadeIn 1s ease-in-out forwards;
+    }
+
+    header .logo {
+        font-size: 2.5em;
+        flex-grow: 1;
+        text-align: center;
+    }
+
+
+
+/* Hamburger styles */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: var(--primary-color);
+    background: none;
+    border: none;
+    padding: 10px;
+}
+
+.hamburger i {
+    transition: transform 0.3s;
+}
+
+#nav-links.show {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#nav-links {
+    display: none;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Mobile styles */
+@media (max-width: 835px) {
+    .hamburger {
+        display: block;
+    }
+
+    #nav-links {
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--header-bg-color);
+        padding: 20px;
+        border-radius: 0;
+        z-index: 1000;
+    }
+
+    #nav-links.show {
+        display: flex;
+    }
+
+    #nav-links li {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        border-bottom: 1px solid var(--accent-color);
+    }
+
+    #nav-links li:last-child {
+        border-bottom: none;
+    }
+
+    #nav-links a {
+        color: var(--primary-color);
+        text-decoration: none;
+        font-size: 1.2em;
+        width: 100%;
+        display: block;
+    }
+
+    #nav-links a:hover {
+        color: var(--secondary-color);
+    }
+}
+
+}
+@media (max-width: 576px) {
+    header .logo {
+        font-size: 2em;
+    }
+
+    .about h1 {
+        font-size: 2.7em;
+        color: var(--primary-color);
+        text-align: center;
+        margin-bottom: 20px;
+        margin-top: 0;
+        animation: fadeIn 1s ease-in-out forwards;
+    }
+
+    .about h2 {
+        font-size: 1.2em;
+        color: var(--secondary-color);
+        opacity: 0;
+        animation: fadeIn 0.5s ease-in-out forwards, ledEffect 0.5s infinite alternate;
+    }
+
+    .about {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about img {
+        margin-top: 20px;
+        max-width: 100%;
+    }
+
+    .about .text-content, .about img {
+        max-width: 100%;
+    }
+
+    .about .text-content {
+        margin-bottom: 20px;
+    }
+
+    .plans img {
+        width: 80%;
+    }
+}
+
+@media (max-width: 375px) {
+    header .logo {
+        font-size: 1.5em;
+    }
+
+    .about h1 {
+        font-size: 1.7em;
+    }
+
+    .about h2 {
+        font-size: 1.2em;
+        color: var(--secondary-color);
+        opacity: 0;
+        animation: fadeIn 0.5s ease-in-out forwards, ledEffect 0.5s infinite alternate;
+    }
+
+    .services-content, .plans-content, .why-content {
+        flex-direction: column;
+    }
+
+    .service-item, .plan-item, .why-item {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .about {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about img {
+        margin-top: 20px;
+        max-width: 100%;
+    }
+
+    .about .text-content, .about img {
+        max-width: 100%;
+    }
+
+    .about .text-content {
+        margin-bottom: 20px;
+    }
+
+    .plans img {
+        width: 80%;
+    }
+}
+
+/* Establecer tamaño máximo de imágenes en toda la página */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Estilo específico para imágenes en la sección "about" */
+.about img {
+    max-width: 50%;
+    height: auto;
+}
+
+/* Estilo específico para la imagen de "Planes de Servicio" */
+.plans img {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.hidden {
+    display: none;
+}
+
+.service-item p, .plan-item p {
+    text-align: justify;
+}
+
+/* Improved styles for service item icons with soft LED effect */
+.service-item i {
+    font-size: 3em;
+    color: var(--led-color-purple);
+    text-shadow: 0 0 10px var(--led-shadow-color), 
+                 0 0 20px var(--led-shadow-color), 
+                 0 0 30px var(--led-shadow-color);
+    transition: text-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.service-item:hover i {
+    text-shadow: 0 0 20px var(--led-hover-shadow-color), 
+                 0 0 40px var(--led-hover-shadow-color), 
+                 0 0 60px var(--led-hover-shadow-color);
+    transform: scale(1.1);
+}
+
+/* Soft LED animations */
+@keyframes ledEffectSoft {
+    from {
+        text-shadow: 0 0 10px var(--led-shadow-color), 0 0 20px var (--led-shadow-color), 0 0 30px var(--led-shadow-color);
+    }
+    to {
+        text-shadow: 0 0 20px var(--led-hover-shadow-color), 0 0 40px var(--led-hover-shadow-color), 0 0 60px var(--led-hover-shadow-color);
+    }
+}
+
+.service-item i {
+    animation: ledEffectSoft 1.5s infinite alternate;
+}
